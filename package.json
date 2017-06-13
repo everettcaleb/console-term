@@ -1,0 +1,28 @@
+{
+  "name": "console-term",
+  "version": "1.0.0",
+  "description": "Terminal control extensions to Node's default console class",
+  "main": "index.js",
+  "scripts": {
+    "test": "$(npm bin)/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/everettcaleb/console-term.git"
+  },
+  "keywords": [
+    "console",
+    "terminal",
+    "cli",
+    "output",
+    "cursor",
+    "movement",
+    "colors"
+  ],
+  "author": "Caleb Everett <everettcaleb95@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/everettcaleb/console-term/issues"
+  },
+  "homepage": "https://github.com/everettcaleb/console-term#readme"
+}
