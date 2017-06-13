@@ -47,6 +47,7 @@ class ConsoleTerminal {
     }
     this.stdout = stdout || process.stdout;
     this.console = new console.Console(this.stdout, this.stderr);
+    this.disableEscapeSequences = false;
   }
 
   clear() {
@@ -146,7 +147,24 @@ class ConsoleTerminal {
   }
 
   sendEscape(str) {
-    this.print(`${ESCAPE}${str}`);
+    if(!this.disableEscapeSequences) {
+      this.print(`${ESCAPE}${str}`);
+    }
+    return this;
+  }
+
+  setEnableEscapes(allow) {
+    this.disableEscapeSequences = allow;
+    return this;
+  }
+
+  enableEscapes() {
+    this.disableEscapeSequences = false;
+    return this;
+  }
+
+  disableEscapes() {
+    this.disableEscapeSequences = true;
     return this;
   }
 
@@ -156,16 +174,26 @@ class ConsoleTerminal {
   }
 
   printHuge(str) {
-    this.sendEscape('#3');
-    this.print(str + '\n');
-    this.sendEscape('#4');
-    this.print(str + '\n');
+    if(this.disableEscapeSequences) {
+      this.print(str + '\n');
+    }
+    else {
+      this.sendEscape('#3');
+      this.print(str + '\n');
+      this.sendEscape('#4');
+      this.print(str + '\n');
+    }
     return this;
   }
 
   printWide(str) {
-    this.sendEscape('#6');
-    this.print(str + '\n');
+    if(this.disableEscapeSequences) {
+      this.print(str + '\n');
+    }
+    else {
+      this.sendEscape('#6');
+      this.print(str + '\n');
+    }
     return this;
   }
 }

@@ -59,6 +59,9 @@ All the standard `Console` functions are available as well as the ones documente
 
 ### Meta
 - `sendEscape(str)`: Prints the `\033` escape sequence followed by the specified string
+- `setEnableEscapes(allow)`: Sets whether to allow escape sequences to be printed (disabling this disables everything but `print`)
+- `enableEscapes()`: Same as `setEnableEscapes(true)`
+- `disableEscapes()`: Same as `setEnableEscapes(false)`
 
 ## Reference
 Below are reference lists for colors, styles, etc.
