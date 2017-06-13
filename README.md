@@ -40,13 +40,13 @@ All the standard `Console` functions are available as well as the ones documente
 
 ### Styling
 - `resetStyle()`: Resets the current formatting, colors, etc.
-- `setColor(color)`: Sets the current foreground color, see [Colors](#Colors) below
+- `setColor(color)`: Sets the current foreground color, see [Colors](#colors) below
 - `setBackgroundColor(color)`: Sets the current background color
-- `setStyle(style)`: Sets the current display style, see [Styles](#Styles)
+- `setStyle(style)`: Sets the current display style, see [Styles](#styles)
 
 ### Cursor
 - `setCursorPos(x, y)`: Sets the current cursor position from top-left
-- `moveCursor(c, direction)`: Moves the cursor the specified spaces in the specified direction, see [Directions](#Directions)
+- `moveCursor(c, direction)`: Moves the cursor the specified spaces in the specified direction, see [Directions](#directions)
 - `moveCursorUp(c)`: Moves the cursor up the specified number of lines
 - `moveCursorDown(c)`: Moves the cursor down the specified number of lines
 - `moveCursorLeft(c)`: Moves the cursor left the specified number of columns
